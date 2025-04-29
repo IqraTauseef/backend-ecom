@@ -22,7 +22,10 @@ connectDB();
 
 app.use(
     cors({
-        origin: 'http://localhost:5173',   // NO SPACE
+        origin: [
+            'http://localhost:5173',
+            'https://effortless-heliotrope-f8601d.netlify.app'
+          ],
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: [
